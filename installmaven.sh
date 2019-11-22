@@ -8,5 +8,7 @@ touch /etc/profile.d/mavenenv.sh
 chmod o+w /etc/profile.d/mavenenv.sh
 echo "export M2_HOME=/opt/maven" >> /etc/profile.d/mavenenv.sh
 echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/mavenenv.sh
+/*** better to vi edit this file and enter above 2 commands *** /
 chmod ugo+x,o-w /etc/profile.d/mavenenv.sh
-echo "execute source /etc/profile.d/mavenenv.sh and post that mvn -version"
+source /etc/profile.d/mavenenv.sh
+mvn --version"
